@@ -19,7 +19,7 @@ final createTeamProvider =
 
     final request = http.MultipartRequest(
       'POST',
-      Uri.parse('http://10.0.2.2:8000/create_team/'),
+      Uri.parse('http://172.28.0.6:8000/create_team/'),
     );
 
     request.fields['manager_id'] = managerId;
@@ -31,7 +31,7 @@ final createTeamProvider =
 
     if (response.statusCode == 200) {
       final teamResponse = await http.get(
-        Uri.parse('http://10.0.2.2:8000/get_team_info/$localId/'),
+        Uri.parse('http://172.28.0.6:8000/get_team_info/$localId/'),
       );
 
       if (teamResponse.statusCode == 200) {
@@ -78,12 +78,12 @@ class TeamNotifier extends StateNotifier<List<Map<String, dynamic>>>
         return;
       }
 
-      String url = 'http://10.0.2.2:8000/get_team_info/$localId/';
+      String url = 'http://172.28.0.6:8000/get_team_info/$localId/';
 
       var response = await http.get(Uri.parse(url));
 
       if (response.statusCode != 200) {
-        url = 'http://10.0.2.2:8000/get_team_info_member/$localId/';
+        url = 'http://172.28.0.6:8000/get_team_info_member/$localId/';
         response = await http.get(Uri.parse(url));
       }
 

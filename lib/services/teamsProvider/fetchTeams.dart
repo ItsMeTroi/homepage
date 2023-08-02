@@ -45,7 +45,7 @@ class TeamsState extends StateNotifier<AsyncValue<List<Team>>> {
   }
 
   Future<List<Team>> _getTeams() async {
-    final url = Uri.parse('http://10.0.2.2:8000/get_all_teams/');
+    final url = Uri.parse('http://172.28.0.6:8000/get_all_teams/');
 
     try {
       final response = await http.get(url);
@@ -74,7 +74,7 @@ final teamsProvider = StateNotifierProvider<TeamsState, AsyncValue<List<Team>>>(
 class joinProvider {
   static Future<void> joinTeam(String teamId, String localId) async {
     final url = Uri.parse(
-        'http://10.0.2.2:8000/join_team/'); // URL to your API endpoint
+        'http://172.28.0.6:8000/join_team/'); // URL to your API endpoint
 
     try {
       final response = await http.post(

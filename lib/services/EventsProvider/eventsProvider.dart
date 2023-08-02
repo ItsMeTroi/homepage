@@ -39,7 +39,7 @@ class CreateEvent {
       }
 
       const apiUrl =
-          'http://10.0.2.2:8000/create_event/'; // Replace with your actual API URL
+          'http://172.28.0.6:8000/create_event/'; // Replace with your actual API URL
 
       final formattedDate = DateFormat('yyyy-MM-dd').format(selectedDate);
       final formattedTime = formatTimeOfDay(selectedTime);

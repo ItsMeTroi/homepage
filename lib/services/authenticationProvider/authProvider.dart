@@ -19,7 +19,7 @@ final authStateChangesProvider = StreamProvider<User?>((ref) {
 });
 
 class AuthRegis extends ChangeNotifier {
-  static const String API_ENDPOINT = "http://10.0.2.2:8000/register/";
+  static const String API_ENDPOINT = "http://172.28.0.6:8000/register/";
 
   Future<String> signUpWithEmail(
     String firstname,
@@ -97,7 +97,7 @@ class UserDetailsProvider with ChangeNotifier {
       final token = await user.getIdToken();
 
       final response = await http.get(
-        Uri.parse('http://10.0.2.2:8000/current_user/'),
+        Uri.parse('http://172.28.0.6:8000/current_user/'),
         headers: {'Authorization': 'Bearer $token'},
       );
 
@@ -142,7 +142,7 @@ class UserDetailsProvider with ChangeNotifier {
     required String email,
     required String password,
   }) async {
-    String url = 'http://10.0.2.2:8000/login/';
+    String url = 'http://172.28.0.6:8000/login/';
 
     Map<String, String> data = {
       'email': email,

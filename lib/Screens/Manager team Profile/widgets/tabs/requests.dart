@@ -126,7 +126,7 @@ Future<void> _respondToRequest(
   String? game, // change game parameter type here
 ) async {
   final managerId = ref.watch(userDetailsProvider).localId;
-  final url = Uri.parse('http://10.0.2.2:8000/respond_to_request/');
+  final url = Uri.parse('http://172.28.0.6:8000/respond_to_request/');
 
   final teamId = request['team_id'];
   final localId = request['localId'];

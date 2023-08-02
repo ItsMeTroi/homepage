@@ -39,7 +39,7 @@ class EventsState extends StateNotifier<AsyncValue<List<Event>>> {
   }
 
   Future<List<Event>> _getEvents() async {
-    final url = Uri.parse('http://10.0.2.2:8000/get_all_events/');
+    final url = Uri.parse('http://172.28.0.6:8000/get_all_events/');
 
     try {
       final response = await http.get(url);

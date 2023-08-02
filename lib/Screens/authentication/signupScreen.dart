@@ -55,7 +55,7 @@ class _EmailPasswordSignupState extends State<EmailPasswordSignup> {
     required String lastname,
   }) async {
     final response = await http.post(
-      Uri.parse("http://10.0.2.2:8000/register/"),
+      Uri.parse("http://172.28.0.6:8000/register/"),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },

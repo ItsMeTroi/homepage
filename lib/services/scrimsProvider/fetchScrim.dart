@@ -8,7 +8,7 @@ final teamNameProvider = FutureProvider.family<String?, String>(
 
 Future<String?> fetchTeamName(String managerId) async {
   final teamResponse = await http.get(
-    Uri.parse('http://10.0.2.2:8000/get_team_info/$managerId/'),
+    Uri.parse('http://172.28.0.6:8000/get_team_info/$managerId/'),
   );
 
   if (teamResponse.statusCode == 200) {
@@ -30,7 +30,7 @@ Stream<List<Map<String, dynamic>>> getAllScrimsByGame(
 
     while (true) {
       final response = await http.get(
-        Uri.parse('http://10.0.2.2:8000/get_all_scrims/$game/'),
+        Uri.parse('http://172.28.0.6:8000/get_all_scrims/$game/'),
       );
 
       if (response.statusCode == 200) {
@@ -88,7 +88,7 @@ Stream<List<Map<String, dynamic>>> getAllScrimsByGame(
 Future<Map<String, dynamic>> getScrimDetails(
     String game, String scrimId) async {
   final response = await http.get(
-    Uri.parse('http://10.0.2.2:8000/get_scrim_details/$game/$scrimId/'),
+    Uri.parse('http://172.28.0.6:8000/get_scrim_details/$game/$scrimId/'),
   );
 
   if (response.statusCode == 200) {
