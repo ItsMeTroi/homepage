@@ -127,7 +127,7 @@ class UserListPage extends HookWidget {
   ) async {
     try {
       final response =
-          await http.get(Uri.parse('http://172.28.0.6:8000/all_users/'));
+          await http.get(Uri.parse('http://192.168.1.5:8000/all_users/'));
       if (response.statusCode == 200) {
         final responseBody = response.body;
         if (responseBody.isNotEmpty) {

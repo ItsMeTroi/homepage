@@ -46,6 +46,7 @@ dependencies:
   permission_handler: ^10.4.3
   cloud_firestore: ^4.8.3
 
+
 dev_dependencies:
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -69,6 +70,7 @@ flutter:
     - assets/Slider2.jpg
     - assets/Slider3.jpg
     - assets/cebuarena.png
+    - assets/Gameboy.mp3
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

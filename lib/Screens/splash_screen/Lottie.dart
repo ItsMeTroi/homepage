@@ -42,13 +42,15 @@ class _CoverPageState extends State<CoverPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [Colors.white, Colors.black],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF1E1E1E), 
+              Color(0xFF3E3E3E), 
+            ],
           ),
         ),
         child: Center(
@@ -68,7 +70,7 @@ class _CoverPageState extends State<CoverPage>
                   });
                 },
                 child: Lottie.network(
-                  'https://assets4.lottiefiles.com/packages/lf20_xvqam5qh.json',
+                  'https://lottie.host/33393702-9c26-4a9d-bfb7-9a737ee4f104/Ekq6dvF7uj.json',
                   controller: _controller,
                   width: 400,
                   height: 400,
